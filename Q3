@@ -29,6 +29,6 @@ if __name__ == '__main__':
         if query[0] == 1:
             queue.enqueue(query[1])  
         elif query[0] == 2:
-            queue.dequeue()  # Dequeue operation
+            queue.dequeue() 
         elif query[0] == 3:
-            print(queue.front())  # Print the front element of the queue
+            print(queue.front())  
