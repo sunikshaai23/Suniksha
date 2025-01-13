@@ -8,8 +8,7 @@ def twoStacks(maxSum, a, b):
         total_sum += a[count]
         count += 1
     
-    max_count = count  # This is the best result so far
-    
+    max_count = count  
     for i in range(m):
         total_sum += b[i]
         
@@ -23,10 +22,10 @@ def twoStacks(maxSum, a, b):
     return max_count
 
 if __name__ == '__main__':
-    games = int(input().strip())  # Number of test cases
+    games = int(input().strip())  
     for _ in range(games):
-        n, m, maxSum = map(int, input().strip().split())  # n: length of stack a, m: length of stack b
-        a = list(map(int, input().strip().split()))  # Stack a
-        b = list(map(int, input().strip().split()))  # Stack b
+        n, m, maxSum = map(int, input().strip().split()) 
+        a = list(map(int, input().strip().split()))  
+        b = list(map(int, input().strip().split())) 
         result = twoStacks(maxSum, a, b)
         print(result)
