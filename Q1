@@ -1,0 +1,19 @@
+def isBalanced(s):
+    stack = []
+    bracket_map = {')': '(', '}': '{', ']': '['}
+    
+    for char in s:
+        if char in bracket_map:
+            if not stack or stack.pop() != bracket_map[char]:
+                return "NO"
+        else:
+            stack.append(char)
+    
+    return "YES" if not stack else "NO"
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    for _ in range(n):
+        s = input().strip()
+        result = isBalanced(s)
+        print(result)
